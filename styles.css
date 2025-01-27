@@ -1,4 +1,4 @@
-/* Pідключення футуристичного шрифту Orbitron */
+/* Підключення футуристичного шрифту Orbitron */
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap');
 
 /* Скидання базових відступів/паддингів */
@@ -110,16 +110,16 @@ h1 {
 
 /* Монети */
 .coin {
-  width: 40px;
-  height: 40px;
+  width: 70px;
+  height: 70px;
 }
 
 .coin-left {
-  margin-right: 10px;
+  margin-right: 15px;
 }
 
 .coin-right {
-  margin-left: 10px;
+  margin-left: 15px;
 }
 
 .button-container {
@@ -127,7 +127,7 @@ h1 {
   justify-content: center;
   align-items: center;
   margin-bottom: 20px; /* Відступ нижче кнопки */
-  gap: 10px; /* Відступ між монетами та кнопкою */
+  gap: 15px; /* Відступ між монетами та кнопкою */
 }
 
 /* Соціальні іконки */
@@ -197,7 +197,7 @@ h1 {
     height: 30px;
   }
   .coin {
-    width: 30px;
-    height: 30px;
+    width: 50px;
+    height: 50px;
   }
 }
