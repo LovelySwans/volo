@@ -1,33 +1,203 @@
-/* Coins styles */
+/* Pідключення футуристичного шрифту Orbitron */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap');
+
+/* Скидання базових відступів/паддингів */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  /* Висота на всю сторінку для фону */
+  min-height: 100vh;
+  /* Анімований градієнт */
+  background: linear-gradient(-45deg, #070b34, #37005c, #0f045e, #29125e);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  overflow: hidden;
+}
+
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Центрування контенту */
+.container {
+  max-width: 600px;
+  text-align: center;
+  margin: auto;
+}
+
+/* Заголовок */
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  font-family: 'Orbitron', sans-serif;
+  animation: floatText 2s ease-in-out infinite;
+  letter-spacing: 1.5px;
+}
+
+@keyframes floatText {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Опис */
+.description {
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+  line-height: 1.5;
+}
+
+/* Кнопки */
+.portfolio-button, .transparent-button {
+  text-decoration: none;
+  font-size: 1.2rem;
+  color: #fff;
+  padding: 15px 30px;
+  border-radius: 8px;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+  display: inline-block;
+  margin: 10px;
+}
+
+.portfolio-button {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: #ff006e;
+  box-shadow: 0 0 10px #ff006e, 0 0 20px #ff006e;
+  margin-bottom: 20px; /* Простір між кнопками */
+}
+
+.portfolio-button:hover {
+  background: #ff006e;
+  color: #000;
+  box-shadow: 0 0 20px #ff1493, 0 0 40px #ff1493;
+}
+
+.transparent-button {
+  border-color: #fff;
+  background: transparent;
+  margin: 0 auto; /* Центрування другої кнопки */
+}
+
+.transparent-button:hover {
+  background: #fff;
+  color: #000;
+}
+
+/* Монети */
 .coin {
   width: 40px;
   height: 40px;
+}
+
+.coin-left {
+  margin-right: 10px;
+}
+
+.coin-right {
+  margin-left: 10px;
 }
 
 .button-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 20px; /* Add spacing below the first button */
-  gap: 10px; /* Spacing between coins and the button */
+  margin-bottom: 20px; /* Відступ нижче кнопки */
+  gap: 10px; /* Відступ між монетами та кнопкою */
 }
 
-/* Buttons styling */
-.portfolio-button {
-  margin-bottom: 20px; /* Space between the buttons */
+/* Соціальні іконки */
+.social-section {
+  margin-top: 40px;
+  text-align: center;
 }
 
-.transparent-button {
-  margin: 0 auto; /* Center the second button */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 20px;
 }
 
-/* Social Icons */
 .social-icons img {
-  width: 40px; /* Set fixed width for icons */
+  width: 40px;
   height: 40px;
   transition: transform 0.3s ease;
 }
 
 .social-icons img:hover {
   transform: scale(1.2);
+}
+
+/* Лінк на CV */
+.cv-link {
+  font-size: 1rem;
+  text-decoration: underline;
+  color: #fff;
+  transition: color 0.3s ease;
+}
+
+.cv-link:hover {
+  color: #ff006e;
+}
+
+/* Хлібні крихти */
+.breadcrumbs {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 0.9rem;
+}
+
+.breadcrumbs a {
+  text-decoration: none;
+  color: #fff;
+  transition: color 0.3s ease;
+}
+
+.breadcrumbs a:hover {
+  color: #ff006e;
+}
+
+/* Адаптивність */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+  .portfolio-button, .transparent-button {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+  .social-icons img {
+    width: 30px;
+    height: 30px;
+  }
+  .coin {
+    width: 30px;
+    height: 30px;
+  }
 }
