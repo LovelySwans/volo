@@ -106,6 +106,33 @@ h1 {
   color: #000;
 }
 
+/* Монети */
+.coin {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  animation: spin 1s linear infinite;
+}
+
+.coin-left {
+  left: calc(50% - 150px);
+  top: calc(50% + 50px);
+}
+
+.coin-right {
+  right: calc(50% - 150px);
+  top: calc(50% + 50px);
+}
+
+@keyframes spin {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
+}
+
 /* Соціальні іконки */
 .social-section {
   margin-top: 40px;
@@ -169,6 +196,10 @@ h1 {
     padding: 10px 20px;
   }
   .social-icons img {
+    width: 30px;
+    height: 30px;
+  }
+  .coin {
     width: 30px;
     height: 30px;
   }
