@@ -1,20 +1,33 @@
 /* Coins styles */
 .coin {
-  width: 50px;
-  height: 50px;
-}
-
-.coin-left {
-  margin-right: 10px;
-}
-
-.coin-right {
-  margin-left: 10px;
+  width: 40px;
+  height: 40px;
 }
 
 .button-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 20px; /* Spacing between buttons */
+  margin-bottom: 20px; /* Add spacing below the first button */
+  gap: 10px; /* Spacing between coins and the button */
+}
+
+/* Buttons styling */
+.portfolio-button {
+  margin-bottom: 20px; /* Space between the buttons */
+}
+
+.transparent-button {
+  margin: 0 auto; /* Center the second button */
+}
+
+/* Social Icons */
+.social-icons img {
+  width: 40px; /* Set fixed width for icons */
+  height: 40px;
+  transition: transform 0.3s ease;
+}
+
+.social-icons img:hover {
+  transform: scale(1.2);
 }
