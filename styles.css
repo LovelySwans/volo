@@ -38,6 +38,44 @@ body {
   }
 }
 
+/* Сітка, що уходить за горизонт */
+.grid-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: radial-gradient(circle, transparent, rgba(255, 255, 255, 0.1));
+  mask-image: linear-gradient(to top, transparent, black);
+  -webkit-mask-image: linear-gradient(to top, transparent, black);
+}
+
+.grid-background::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 200%;
+  height: 200%;
+  background: repeating-linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0.2) 0px,
+    rgba(255, 255, 255, 0.2) 1px,
+    transparent 1px,
+    transparent 40px
+  ),
+    repeating-linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.2) 0px,
+      rgba(255, 255, 255, 0.2) 1px,
+      transparent 1px,
+      transparent 40px
+    );
+  transform: translate(-50%, -50%) rotateX(60deg);
+  opacity: 0.5;
+}
+
 /* Центрування контенту */
 .container {
   max-width: 600px;
