@@ -1,7 +1,6 @@
-/* Підключення футуристичного шрифту Orbitron */
+/* Загальні стилі */
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap');
 
-/* Скидання базових відступів/паддингів */
 * {
   margin: 0;
   padding: 0;
@@ -21,7 +20,7 @@ body {
   color: #fff;
   text-align: center;
   padding: 20px;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 @keyframes gradientBG {
@@ -36,11 +35,13 @@ body {
   }
 }
 
+/* Центрування контенту */
 .container {
   max-width: 600px;
   text-align: center;
   margin: auto;
   animation: hyperspaceEntry 2s ease-in-out forwards;
+  margin-bottom: 50px; /* Додано для уникнення перекриття елементів інтерфейсом */
 }
 
 @keyframes hyperspaceEntry {
@@ -151,8 +152,32 @@ h1 {
   color: #ff006e;
 }
 
+/* Монети */
+.coin {
+  width: 40px;
+  height: 40px;
+}
+
+.coin-left {
+  margin-right: 15px;
+}
+
+.coin-right {
+  margin-left: 15px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  gap: 15px;
+}
+
+/* Соціальні іконки */
 .social-section {
-  margin-top: 40px;
+  margin-top: 20px;
+  margin-bottom: 40px;
 }
 
 .social-icons {
